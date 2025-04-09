@@ -43,18 +43,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 -->
 
-##  0.25.0 (published on 2025-04-09)
-## Added
+## 0.25.0 (published on 2025-04-09)
+### Added
 
 - More monitoring.
 - Support for gematik TI-Messenger-Testsuite 2.1.1.
 
-## Changed
+### Changed
 
 - Optimized caching of federation list.
 - Stabilized certain messenger test driver interactions.
 
-## Fixed
+### Fixed
 
 - An error that circumvented one stage of the federation list cache.
 - Added missing Matrix media routes for thumbnails.
