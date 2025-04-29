@@ -42,6 +42,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - A vulnerability.
 
 -->
+## 0.27.0 (published on 2025-04-29)
+
+### Added
+
+- Support for up to 100mb large attachments
+- Support for gematik TI-Messenger-Testsuite 2.2.1.
+
+### Fixed
+
+- Fixed test driver memory leak
+
+## 0.26.0 (published on 2025-04-22)
+
+### Fixed
+
+- Improved test driver memory leak
+
+### Changed
+
+- Removed HBA Cleanup from Org-Admin testdriver.
 
 ## 0.25.0 (published on 2025-04-09)
 ### Added
@@ -79,10 +99,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Creating a room, including inviting a user from outside the federation, is now correctly rejected.
 
 ## Known issues
-The following restrictions apply when using Testsuite Version 2.1.1:
+The following restrictions apply when using Testsuite Version 2.2.0:
 - @TCID:TIM_V2_BASIS_AF_10X0103 and @TCID:TIM_V2_BASIS_AF_10X0104 contain a bug in the testsuite, thus they do not run successfully
-- @TCID:TIM_V2_BASIS_AF_040114, @TCID:TIM_V2_BASIS_AF_060112 - session key automated tests are not supported, these tests will be removed from the testsuite in a future release.
-- @TCID:TIM_V2_BASIS_AF_09X0101, @TCID:TIM_V2_BASIS_AF_09X0401 - contain a bug in testsuite
+- Testsuite Tests regarding the Allow- and Block-All lists being kept after a logout do not work currently because of a bug in the test driver.
+- Tests putting insured people on Allow- and Block-All lists are not implemented yet.
 - @TCID:TIM_V2_BASIS_AF_08X0102 - Known Bug where test fails if a HBA user is used where a similarly named HBA user is found during the VZD search
 
 ## Version Compatibility Matrix
@@ -90,3 +110,5 @@ The following restrictions apply when using Testsuite Version 2.1.1:
 |:-------:|:--------------:|:---------------:|:--------------------:|:---------------:|:----------------:|:---------------------:|:----------------:|:---------------------:|:----------:|
 | 0.24.0  |     1.7.2      |     0.3.14      |        0.6.0         |      0.7.2      |      0.13.0      |        0.16.0         |      1.28.0      |        0.13.0         |   2.1.0    |
 | 0.25.0  |     1.8.0      |     0.3.14      |        0.6.1         |      0.8.0      |      0.13.0      |        0.16.0         |      1.28.1      |        0.13.5         |   2.1.1    |
+| 0.26.0  |     1.8.1      |     0.3.14      |        0.6.1         |      0.8.0      |      0.13.0      |        0.17.0         |      1.28.1      |        0.13.6         |   2.1.1    |
+| 0.27.0  |     1.8.2      |     0.3.14      |        0.6.1         |      0.8.1      |      0.13.0      |        0.18.0         |      1.28.1      |        0.13.8         |   2.2.1    |
