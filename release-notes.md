@@ -42,6 +42,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - A vulnerability.
 
 -->
+
+## 0.28.0 (published on 2025-06-03)
+
+### Added
+
+- Support for insurance group users
+- Support for gematik TI-Messenger-Testsuite 2.2.3.
+
+### Fixed
+
+- Fixed classic tim-variant org-admin-testdriver HBA cleanup
+
+### Changed
+
+- Improved Messenger-Service expire management in Registration Service 
+
+
 ## 0.27.0 (published on 2025-04-29)
 
 ### Added
@@ -99,11 +116,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Creating a room, including inviting a user from outside the federation, is now correctly rejected.
 
 ## Known issues
-The following restrictions apply when using Testsuite Version 2.2.0:
-- @TCID:TIM_V2_BASIS_AF_10X0103 and @TCID:TIM_V2_BASIS_AF_10X0104 contain a bug in the testsuite, thus they do not run successfully
-- Testsuite Tests regarding the Allow- and Block-All lists being kept after a logout do not work currently because of a bug in the test driver.
-- Tests putting insured people on Allow- and Block-All lists are not implemented yet.
-- @TCID:TIM_V2_BASIS_AF_08X0102 - Known Bug where test fails if a HBA user is used where a similarly named HBA user is found during the VZD search
+The following restrictions apply when using Testsuite Version 2.2.3:
+- Tests concerning dehydrates Devices are not supported yet 
 
 ## Version Compatibility Matrix
 | Release | Domain Service | Raw Data Master | Registration Service | Messenger Proxy | Org-Admin Client | Org-Admin Test Driver | Messenger Client | Messenger Test Driver | Test Suite |
@@ -112,3 +126,4 @@ The following restrictions apply when using Testsuite Version 2.2.0:
 | 0.25.0  |     1.8.0      |     0.3.14      |        0.6.1         |      0.8.0      |      0.13.0      |        0.16.0         |      1.28.1      |        0.13.5         |   2.1.1    |
 | 0.26.0  |     1.8.1      |     0.3.14      |        0.6.1         |      0.8.0      |      0.13.0      |        0.17.0         |      1.28.1      |        0.13.6         |   2.1.1    |
 | 0.27.0  |     1.8.2      |     0.3.14      |        0.6.1         |      0.8.1      |      0.13.0      |        0.18.0         |      1.28.1      |        0.13.8         |   2.2.1    |
+| 0.28.0  |     1.8.3      |     0.3.14      |        0.6.2         |      0.8.2      |      0.13.0      |        0.18.0         |      1.28.1      |        0.14.2         |   2.2.3    |
