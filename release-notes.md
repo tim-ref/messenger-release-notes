@@ -117,7 +117,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## Known issues
 The following restrictions apply when using Testsuite Version 2.2.3:
-- Tests concerning dehydrates Devices are not supported yet 
+- Tests concerning dehydrates Devices are not supported yet
+- Running ePA Tests sometimes fail for the following actions:
+  - Ref Pro user sends direct message to ePA user -> 403: Cannot find user with mxId <MXID> locally or in VZD
+  - Ref Pro user sends direct message to ePA user  -> 403: Creation of the room failed (other user(s) [...] can be found, but cannot be invited)
+  - Ref Pro user creates a room and tries to invite ePA user  -> 403: Not enough rights to invite other member or direct room that cannot invite more members 
+  - Ref Pro user tries to change authorization mode  -> 403: Authorization Mode not allowed 
 
 ## Version Compatibility Matrix
 | Release | Domain Service | Raw Data Master | Registration Service | Messenger Proxy | Org-Admin Client | Org-Admin Test Driver | Messenger Client | Messenger Test Driver | Test Suite |
