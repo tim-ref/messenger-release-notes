@@ -42,6 +42,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - A vulnerability.
 
 -->
+## 0.29.0 (published on 2025-07-21)
+
+### Added
+
+- Support for gematik TI-Messenger-Testsuite 2.3.0
+
+### Fixed
+
+- Fixed issue with user search in test driver
+- Allow client connections to homeservers with individual supported Matrix version 1.11
+
+### Changed
+
+- Improved performance for multiple simultaneous accesses in proxy
+- Updated dependencies from Rawdata-Master + optimizations
+
 
 ## 0.28.0 (published on 2025-06-03)
 
@@ -116,13 +132,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Creating a room, including inviting a user from outside the federation, is now correctly rejected.
 
 ## Known issues
-The following restrictions apply when using Testsuite Version 2.2.3:
+The following restrictions apply when using Testsuite Version 2.3.0:
 - Tests concerning dehydrates Devices are not supported yet
 - Running ePA Tests sometimes fail for the following actions:
-  - Ref Pro user sends direct message to ePA user -> 403: Cannot find user with mxId <MXID> locally or in VZD
-  - Ref Pro user sends direct message to ePA user  -> 403: Creation of the room failed (other user(s) [...] can be found, but cannot be invited)
-  - Ref Pro user creates a room and tries to invite ePA user  -> 403: Not enough rights to invite other member or direct room that cannot invite more members 
-  - Ref Pro user tries to change authorization mode  -> 403: Authorization Mode not allowed 
+- Ref Pro user sends direct message to ePA user  -> 403: Creation of the room failed (other user(s) [...] can be found, but cannot be invited)
+- The following tests are failing: @TCID:TIM_V2_BASIS_AF_050106 or @TCID:TIM_V2_BASIS_AF_050109
+- Some cases testing the default room versions currently fail, because m.room.name and m.room.topic events are not set anymore in direct chats. But this is correct behavior, and the assertions will be adapted in future Testsuite versions.
 
 ## Version Compatibility Matrix
 | Release | Domain Service | Raw Data Master | Registration Service | Messenger Proxy | Org-Admin Client | Org-Admin Test Driver | Messenger Client | Messenger Test Driver | Test Suite |
@@ -132,3 +147,4 @@ The following restrictions apply when using Testsuite Version 2.2.3:
 | 0.26.0  |     1.8.1      |     0.3.14      |        0.6.1         |      0.8.0      |      0.13.0      |        0.17.0         |      1.28.1      |        0.13.6         |   2.1.1    |
 | 0.27.0  |     1.8.2      |     0.3.14      |        0.6.1         |      0.8.1      |      0.13.0      |        0.18.0         |      1.28.1      |        0.13.8         |   2.2.1    |
 | 0.28.0  |     1.8.3      |     0.3.14      |        0.6.2         |      0.8.2      |      0.13.0      |        0.18.0         |      1.28.1      |        0.14.2         |   2.2.3    |
+| 0.29.0  |     1.8.4      |     0.3.15      |        0.6.2         |      0.8.3      |      0.13.0      |        0.18.0         |      1.28.2      |        0.14.9         |   2.3.0    |
