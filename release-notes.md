@@ -135,8 +135,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 The following restrictions apply when using Testsuite Version 2.3.0:
 - Tests concerning dehydrates Devices are not supported yet
 - Running ePA Tests sometimes fail for the following actions:
-- Ref Pro user sends direct message to ePA user  -> 403: Creation of the room failed (other user(s) [...] can be found, but cannot be invited)
-- The following tests are failing: @TCID:TIM_V2_BASIS_AF_050106 or @TCID:TIM_V2_BASIS_AF_050109
+  - Ref Pro user sends direct message to ePA user  -> 403: Creation of the room failed (other user(s) [...] can be found, but cannot be invited)
+- The following tests are failing, which will be fixed in a future release: @TCID:TIM_V2_BASIS_AF_050106, @TCID:TIM_V2_BASIS_AF_050109
 - Some cases testing the default room versions currently fail, because m.room.name and m.room.topic events are not set anymore in direct chats. But this is correct behavior, and the assertions will be adapted in future Testsuite versions.
 
 ## Version Compatibility Matrix
