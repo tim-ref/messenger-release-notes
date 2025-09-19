@@ -141,7 +141,6 @@ The following restrictions apply when using Testsuite Version 2.3.0:
 - The clean-up of the Org-Admin test driver sometimes fails when called too quickly after one another.
 - The VZD returns the managing organization as an FHIR reference object, but the test suite expects a string. Currently, our test driver does not perform this mapping.
   - A possible workaround is to remove the managing organization in the VZD.
--  
 
 ## Version Compatibility Matrix
 | Release | Domain Service | Raw Data Master | Registration Service | Messenger Proxy | Org-Admin Client | Org-Admin Test Driver | Messenger Client | Messenger Test Driver | Test Suite |
