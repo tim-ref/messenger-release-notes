@@ -138,6 +138,10 @@ The following restrictions apply when using Testsuite Version 2.3.0:
   - Ref Pro user sends direct message to ePA user  -> 403: Creation of the room failed (other user(s) [...] can be found, but cannot be invited)
 - The following tests are failing, which will be fixed in a future release: @TCID:TIM_V2_BASIS_AF_050106, @TCID:TIM_V2_BASIS_AF_050109
 - Some cases testing the default room versions currently fail, because m.room.name and m.room.topic events are not set anymore in direct chats. But this is correct behavior, and the assertions will be adapted in future Testsuite versions.
+- The clean-up of the Org-Admin test driver sometimes fails when called too quickly after one another.
+- The VZD returns the managing organization as an FHIR reference object, but the test suite expects a string. Currently, our test driver does not perform this mapping.
+  - A possible workaround is to remove the managing organization in the VZD.
+-  
 
 ## Version Compatibility Matrix
 | Release | Domain Service | Raw Data Master | Registration Service | Messenger Proxy | Org-Admin Client | Org-Admin Test Driver | Messenger Client | Messenger Test Driver | Test Suite |
