@@ -142,7 +142,7 @@ The following restrictions apply when using Testsuite Version 2.3.0:
 12X.01.04, 01.01.02
 
 ## General Tips
-- We recomment to configure a testsuite claiming duration of 600s, because some tests take longer than the default time. Tests, where this was observed, are @TCID:TIM_V2_BASIS_AF_050106, @TCID:TIM_V2_BASIS_AF_050109
+- We recomment to configure a testsuite claiming duration of 600s, because some tests take longer than the default time. Tests, where this was observed, are @TCID:TIM_V2_BASIS_AF_050106, @TCID:TIM_V2_BASIS_AF_050109, @TCID:TIM_V2_BASIS_AF_050111
 
 ## Version Compatibility Matrix
 | Release | Domain Service | Raw Data Master | Registration Service | Messenger Proxy | Org-Admin Client | Org-Admin Test Driver | Messenger Client | Messenger Test Driver | Test Suite |
