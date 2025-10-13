@@ -42,6 +42,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - A vulnerability.
 
 -->
+## 0.30.0 (published on 2025-10-13)
+
+### Added
+
+- Support for experimental feature MSC3814 - Dehydrated Devices
+- Always show bootstrap dialog for recovery key
+
+
+### Fixed
+
+- Room name and topic are properly set when creating a room, and omitted if the room has no
+name/topic.
+- Corrected emoji (❤️) validation for reaction events.
+
+### Changed
+
+- Improved CleanUp of Org-Admin testdriver.
+
 ## 0.29.0 (published on 2025-07-21)
 
 ### Added
