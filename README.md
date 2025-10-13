@@ -151,9 +151,7 @@ name/topic.
 
 ## Known issues
 The following restrictions apply when using Testsuite Version 2.3.0:
-- Tests concerning dehydrates Devices are not supported yet
 - The cases 09X.01.01 + 09X.04.01 testing the default room state currently fail, because m.room.name and m.room.topic events are not set anymore in direct chats. But this is correct behavior, and the assertions will be adapted in future Testsuite versions.
-- The clean-up of the Org-Admin test driver sometimes fails when called too quickly after one another. This will be fixed in a future release.
 - The VZD returns the managing organization as an FHIR reference object, but the test suite expects a string. Currently, our test driver does not perform this mapping.
   - A possible workaround is to remove the managing organization in the VZD.
 - Rarely, an issue was observed where a device was not unclaimed after a test, which lead to the next test failing because there are no free devices. Testcases, where this was observed: 12X.01.03
