@@ -42,13 +42,29 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - A vulnerability.
 
 -->
+## 0.31.0 (published on 2025-12-11)
+
+### Added
+
+- Freeze actual versions and add new variant before upgrading spec compatibility.
+- Support for gematik TI-Messenger-Testsuite 2.3.3.
+
+### Fixed 
+
+- Fixed parsing issue of room states in client testdriver.
+- Improved federated public room join check. Check join rules on all rooms.
+
+### Changed
+
+- Improved stability in client testdriver.
+
+
 ## 0.30.0 (published on 2025-10-13)
 
 ### Added
 
 - Support for experimental feature MSC3814 - Dehydrated Devices
 - Always show bootstrap dialog for recovery key
-
 
 ### Fixed
 
@@ -150,12 +166,10 @@ name/topic.
 - Creating a room, including inviting a user from outside the federation, is now correctly rejected.
 
 ## Known issues
-The following restrictions apply when using Testsuite Version 2.3.0:
+The following restrictions apply when using Testsuite Version 2.3.3:
 - The cases 09X.01.01 + 09X.04.01 testing the default room state currently fail, because m.room.name and m.room.topic events are not set anymore in direct chats. But this is correct behavior, and the assertions will be adapted in future Testsuite versions.
 - The VZD returns the managing organization as an FHIR reference object, but the test suite expects a string. Currently, our test driver does not perform this mapping.
   - A possible workaround is to remove the managing organization in the VZD.
-- Rarely, an issue was observed where a device was not unclaimed after a test, which lead to the next test failing because there are no free devices. Testcases, where this was observed: 12X.01.03
-12X.01.04, 01.01.02
 
 ## General Tips
 - We recomment to configure a testsuite claiming duration of 600s, because some tests take longer than the default time. Tests, where this was observed, are @TCID:TIM_V2_BASIS_AF_050106, @TCID:TIM_V2_BASIS_AF_050109, @TCID:TIM_V2_BASIS_AF_050111
@@ -167,5 +181,8 @@ The following restrictions apply when using Testsuite Version 2.3.0:
 | 0.25.0  |     1.8.0      |     0.3.14      |        0.6.1         |      0.8.0      |      0.13.0      |        0.16.0         |      1.28.1      |        0.13.5         |   2.1.1    |
 | 0.26.0  |     1.8.1      |     0.3.14      |        0.6.1         |      0.8.0      |      0.13.0      |        0.17.0         |      1.28.1      |        0.13.6         |   2.1.1    |
 | 0.27.0  |     1.8.2      |     0.3.14      |        0.6.1         |      0.8.1      |      0.13.0      |        0.18.0         |      1.28.1      |        0.13.8         |   2.2.1    |
-| 0.28.0  |     1.8.3      |     0.3.14      |        0.6.2         |      0.8.2      |      0.13.0      |        0.18.0         |      1.28.1      |        0.14.2         |   2.2.3    |
-| 0.29.0  |     1.8.4      |     0.3.15      |        0.6.2         |      0.8.3      |      0.13.0      |        0.18.0         |      1.28.2      |        0.14.9         |   2.3.0    |
+| 0.28.0  |     1.8.3      |     0.3.14      |        0.6.2         |      0.8.2      |      0.13.0      |        0.19.0         |      1.28.1      |        0.14.2         |   2.2.3    |
+| 0.29.0  |     1.8.4      |     0.3.15      |        0.6.2         |      0.8.3      |      0.13.0      |        0.19.0         |      1.28.2      |        0.14.9         |   2.3.0    |
+| 0.29.1  |     1.8.4      |     0.3.15      |        0.6.2         |      0.8.3      |      0.13.1      |        0.19.1         |      1.28.2      |        0.14.9         |   2.3.0    |
+| 0.30.0  |     1.9.0      |     0.3.15      |        0.6.2         |      0.9.0      |      0.13.1      |        0.19.2         |      1.29.0      |        0.14.10        |   2.3.0    |
+| 0.31.0  |     1.10.0     |     0.3.15      |        0.7.0         |     0.10.0      |      0.13.1      |        0.19.2         |      1.29.0      |        0.14.15        |   2.3.3    |
