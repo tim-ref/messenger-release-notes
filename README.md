@@ -166,7 +166,7 @@ name/topic.
 - Creating a room, including inviting a user from outside the federation, is now correctly rejected.
 
 ## Known issues
-The following restrictions apply when using Testsuite Version 2.3.3:
+The following restrictions apply when using Testsuite Version 2.3.0 (marked as @WIP in newer Versions -> so they are ignored in test run):
 - The cases 09X.01.01 + 09X.04.01 testing the default room state currently fail, because m.room.name and m.room.topic events are not set anymore in direct chats. But this is correct behavior, and the assertions will be adapted in future Testsuite versions.
 - The VZD returns the managing organization as an FHIR reference object, but the test suite expects a string. Currently, our test driver does not perform this mapping.
   - A possible workaround is to remove the managing organization in the VZD.
