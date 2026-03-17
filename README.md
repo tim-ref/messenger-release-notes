@@ -42,6 +42,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - A vulnerability.
 
 -->
+## 0.32.0 (published on 2026-03-17)
+
+### Added
+
+- Support for gemSpec TI-M Basis 1.2.0+ and TI-M Pro 1.1.0+
+- Support for gematik TI-Messenger-Testsuite 3.0.0
+
+### Changed
+
+- Improved stability in registration-service, client-testdriver and messenger-proxy.
+
 ## 0.31.0 (published on 2025-12-11)
 
 ### Added
@@ -166,6 +177,7 @@ name/topic.
 - Creating a room, including inviting a user from outside the federation, is now correctly rejected.
 
 ## Known issues
+- Some test cases that try to set endpointVisibility to 'hide-versicherte' fail with the error message '400 - Cannot set hide Versicherte'. This behaviour is unreliable and the tests should succeed on retry.
 The following restrictions apply when using Testsuite Version 2.3.0 (marked as @WIP in newer Versions):
 - The cases 09X.01.01 + 09X.04.01 testing the default room state currently fail, because m.room.name and m.room.topic events are not set anymore in direct chats. But this is correct behavior, and the assertions will be adapted in future Testsuite versions.
 - The VZD returns the managing organization as an FHIR reference object, but the test suite expects a string. Currently, our test driver does not perform this mapping.
@@ -185,4 +197,5 @@ The following restrictions apply when using Testsuite Version 2.3.0 (marked as @
 | 0.29.0  |     1.8.4      |     0.3.15      |        0.6.2         |      0.8.3      |      0.13.0      |        0.19.0         |      1.28.2      |        0.14.9         |   2.3.0    |
 | 0.29.1  |     1.8.4      |     0.3.15      |        0.6.2         |      0.8.3      |      0.13.1      |        0.19.1         |      1.28.2      |        0.14.9         |   2.3.0    |
 | 0.30.0  |     1.9.0      |     0.3.15      |        0.6.2         |      0.9.0      |      0.13.1      |        0.19.2         |      1.29.0      |        0.14.10        |   2.3.0    |
-| 0.31.0  |     1.10.0     |     0.3.15      |        0.7.0         |     0.10.0      |      0.13.1      |        0.19.2         |      1.29.0      |        0.14.15        |   2.3.3    |
+| 0.31.0  |     1.10.0     |     0.3.15      |        0.7.0         |      0.10.0     |      0.13.1      |        0.19.2         |      1.29.0      |        0.14.15        |   2.3.3    |
+| 0.32.0  |     1.11.0     |     0.3.15      |        0.7.1         |      0.11.0     |      0.13.1      |        0.19.2         |      1.30.0      |        0.15.3         |   3.0.0    |
