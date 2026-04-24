@@ -42,6 +42,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - A vulnerability.
 
 -->
+## 0.32.1 (published on 2026-04-24)
+
+### Fixed
+
+- Fixed issues in the test driver
+  - Message events are now returned correctly after replacement and redaction
+  - Error message for A_28271 has been adjusted
+  - History visibility is now returned correctly after changes
+
 ## 0.32.0 (published on 2026-03-17)
 
 ### Added
@@ -199,3 +208,4 @@ The following restrictions apply when using Testsuite Version 2.3.0 (marked as @
 | 0.30.0  |     1.9.0      |     0.3.15      |        0.6.2         |      0.9.0      |      0.13.1      |        0.19.2         |      1.29.0      |        0.14.10        |   2.3.0    |
 | 0.31.0  |     1.10.0     |     0.3.15      |        0.7.0         |      0.10.0     |      0.13.1      |        0.19.2         |      1.29.0      |        0.14.15        |   2.3.3    |
 | 0.32.0  |     1.11.0     |     0.3.15      |        0.7.1         |      0.11.0     |      0.13.1      |        0.19.2         |      1.30.0      |        0.15.3         |   3.0.0    |
+| 0.32.1  |     1.11.0     |     0.3.15      |        0.7.1         |      0.11.0     |      0.13.1      |        0.19.2         |      1.30.0      |        0.15.7         |   3.0.0    |
