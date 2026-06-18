@@ -42,6 +42,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - A vulnerability.
 
 -->
+## 0.32.2 (published on 2026-06-18)
+
+### Changed
+- Simplified variant selection
+- Simplified permission configuration
+
+### Fixed
+- Fixed configuration error of default authorization check concept 
+- Fixed configuration error when creating public rooms in Messenger Client
+- Fixed incorrect redaction timestamps
+
 ## 0.32.1 (published on 2026-04-24)
 
 ### Fixed
@@ -209,3 +220,4 @@ The following restrictions apply when using Testsuite Version 2.3.0 (marked as @
 | 0.31.0  |     1.10.0     |     0.3.15      |        0.7.0         |      0.10.0     |      0.13.1      |        0.19.2         |      1.29.0      |        0.14.15        |   2.3.3    |
 | 0.32.0  |     1.11.0     |     0.3.15      |        0.7.1         |      0.11.0     |      0.13.1      |        0.19.2         |      1.30.0      |        0.15.3         |   3.0.0    |
 | 0.32.1  |     1.11.0     |     0.3.15      |        0.7.1         |      0.11.0     |      0.13.1      |        0.19.2         |      1.30.0      |        0.15.7         |   3.0.0    |
+| 0.32.2  |     1.11.1     |     0.3.15      |        0.8.0         |      0.11.1     |      0.13.1      |        0.19.2         |      1.30.1      |        0.15.7         |   3.0.0    |
