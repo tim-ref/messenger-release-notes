@@ -42,6 +42,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - A vulnerability.
 
 -->
+## 0.32.4 (published on 2026-08-26)
+
+### Fixed
+- Fixed an issue when replacing events and deleting events via replace operations.
+
 ## 0.32.3 (published on 2026-07-17)
 
 ### Fixed
@@ -202,7 +207,7 @@ name/topic.
 - Creating a room, including inviting a user from outside the federation, is now correctly rejected.
 
 ## Known issues
-- The test driver does not correctly aggregate replace events, which may cause IOP test cases TIM_V3_BASIS_AF_14X0123 and TIM_V3_BASIS_AF_14X0124 to fail.
+- Reading the group exceptions from the authorization configuration for enforcing authorization checks in the FD is not working. As a result, the ePA V3 test cases 05X.05.03 and 05X.05.04 fail.
 - Some test cases that try to set endpointVisibility to 'hide-versicherte' fail with the error message '400 - Cannot set hide Versicherte'. This behaviour is unreliable and the tests should succeed on retry.
 The following restrictions apply when using Testsuite Version 2.3.0 (marked as @WIP in newer Versions):
 - The cases 09X.01.01 + 09X.04.01 testing the default room state currently fail, because m.room.name and m.room.topic events are not set anymore in direct chats. But this is correct behavior, and the assertions will be adapted in future Testsuite versions.
@@ -228,3 +233,4 @@ The following restrictions apply when using Testsuite Version 2.3.0 (marked as @
 | 0.32.1  |     1.11.0     |     0.3.15      |        0.7.1         |      0.11.0     |      0.13.1      |        0.19.2         |      1.30.0      |        0.15.7         |   3.0.0    |
 | 0.32.2  |     1.11.1     |     0.3.15      |        0.8.0         |      0.11.1     |      0.13.1      |        0.19.2         |      1.30.1      |        0.15.7         |   3.0.0    |
 | 0.32.3  |     1.11.2     |     0.3.15      |        0.8.1         |      0.11.1     |      0.13.1      |        0.19.2         |      1.30.1      |        0.15.7         |   3.1.1    |
+| 0.32.4  |     1.11.2     |     0.3.15      |        0.8.1         |      0.11.1     |      0.13.1      |        0.19.2         |      1.30.1      |        0.15.11        |   3.1.1    |
