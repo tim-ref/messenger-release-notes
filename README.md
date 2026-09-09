@@ -207,6 +207,7 @@ name/topic.
 - Creating a room, including inviting a user from outside the federation, is now correctly rejected.
 
 ## Known issues
+- Issues currently exist in user-blocking scenarios, which may cause ePA V3 test cases 05.01.03, 05.01.05, and 05.03.03 to fail.
 - Reading the group exceptions from the authorization configuration for enforcing authorization checks in the FD is not working. As a result, the ePA V3 test cases 05X.05.03 and 05X.05.04 fail.
 - Some test cases that try to set endpointVisibility to 'hide-versicherte' fail with the error message '400 - Cannot set hide Versicherte'. This behaviour is unreliable and the tests should succeed on retry.
 The following restrictions apply when using Testsuite Version 2.3.0 (marked as @WIP in newer Versions):
