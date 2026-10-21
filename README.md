@@ -42,6 +42,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - A vulnerability.
 
 -->
+## 0.32.6 (published on 2026-10-20)
+
+### Fixed
+- Permission configuration is now correctly enforced during room creation, fixing issues with blocking direct chats.
+- Permission configuration for group exceptions (insured users) is now correctly enforced, fixing issues with ePA IOP tests.
+- Fixed cache, memory, and connection issues to improve stability and performance.
+- Fixed display and download of media with captions.
+- Enabled captions when sending media.
+- Fixed thumbnail flickering.
+
 ## 0.32.5 (published on 2026-09-14)
 
 ### Fixed
@@ -212,8 +222,6 @@ name/topic.
 - Creating a room, including inviting a user from outside the federation, is now correctly rejected.
 
 ## Known issues
-- Issues currently exist in user-blocking scenarios, which may cause ePA V3 test cases 05.01.03, 05.01.05, and 05.03.03 to fail.
-- Reading the group exceptions from the authorization configuration for enforcing authorization checks in the FD is not working. As a result, the ePA V3 test cases 05X.05.01, 05X.05.04, 05X.05.03 and 05X.05.04 fail.
 - Some test cases that try to set endpointVisibility to 'hide-versicherte' fail with the error message '400 - Cannot set hide Versicherte'. This behaviour is unreliable and the tests should succeed on retry.
 The following restrictions apply when using Testsuite Version 2.3.0 (marked as @WIP in newer Versions):
 - The cases 09X.01.01 + 09X.04.01 testing the default room state currently fail, because m.room.name and m.room.topic events are not set anymore in direct chats. But this is correct behavior, and the assertions will be adapted in future Testsuite versions.
@@ -241,3 +249,4 @@ The following restrictions apply when using Testsuite Version 2.3.0 (marked as @
 | 0.32.3  |     1.11.2     |     0.3.15      |        0.8.1         |      0.11.1     |      0.13.1      |        0.19.2         |      1.30.1      |        0.15.7         |   3.1.1    |
 | 0.32.4  |     1.11.2     |     0.3.15      |        0.8.1         |      0.11.1     |      0.13.1      |        0.19.2         |      1.30.1      |        0.15.11        |   3.1.1    |
 | 0.32.5  |     1.11.3     |     0.3.15      |        0.8.2         |      0.11.1     |      0.13.1      |        0.19.2         |      1.30.1      |        0.15.11        |   3.1.1    |
+| 0.32.6  |     1.11.4     |     0.3.15      |        0.8.2         |      0.11.2     |      0.13.1      |        0.19.2         |      1.30.2      |        0.15.18        |   3.1.4    |
